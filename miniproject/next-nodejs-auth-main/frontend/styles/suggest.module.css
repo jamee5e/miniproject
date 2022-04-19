@@ -1,0 +1,168 @@
+/* Style ของหน้านี้เป็นการจัดหน้า Suggest และหน้า About */
+/* มีการใช้ทักษะการ Span ปุ่ม */
+/* มีการใช้ทักษะการ marquee ข้อความ */
+/* มีการใช้ทักษะการ ดึง font ภายนอกมาใช้ */
+
+/* การนำ font จากภายนอกเข้ามาใช้งาน */
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300&family=Varela+Round&display=swap');
+
+/* style หลักของทั้งหน้า  */
+.container {                                                        
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Karantina', cursive;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* style ของข้อความวิ่งได้ <marquee> ของหน้า Suggest  */
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Karantina', cursive;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* ภาพแสดงวิธีการใช้งานเครื่องซักผ้าของหน้า Suggest */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Karantina', cursive;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* สีของ font <marquee> ของหน้า Suggest */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    color: rgb(146, 198, 207);
+}
+
+.about{
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* สีของ ปุ่ม NEXT ของหน้า Suggest เป็นการทำแบบ Spen เมื่อชี้ไปที่ปุ่มจะสไลด์ลูกศรขึ้นมา */
+.next{
+    background-color:rgb(135, 238, 115);
+    border-radius: 2px;
+    border: none;
+    color: rgb(48, 48, 48);
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+  
+.next span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+    
+.next span:after {
+    /* 00bb คือ >> */
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: 0.5s;
+}
+    
+.next:hover span {
+    padding-right: 25px;
+}
+    
+.next:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+  
+/* สีของ ปุ่ม Previous ของหน้า about เป็นการทำแบบ Spen เมื่อชี้ไปที่ปุ่มจะสไลด์ลูกศรขึ้นมา */
+.previous{
+    background-color:rgb(135, 238, 115);
+    border-radius: 2px;
+    border: none;
+    color: rgb(48, 48, 48);
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+  
+.previous span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+    
+.previous span:after {
+    /* 00ab คือ << */
+    position: absolute;
+    content: '\00ab';
+    opacity: 0;
+    top: 0;
+}
+    
+.previous:hover span {
+    padding-left: 25px;
+}
+    
+.previous:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+
+/* เป็นการกำหนดสัดส่วนของข้อมูล Contact ให้อยู่กึ่งกลาง */
+  
+.data{
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* เป็นการกำหนดสัดส่วนของข้อมูล ใส่กรอบให้ข้อความ */
+.datacontainer{
+    border: 1px solid rgb(131, 155, 158);
+    border-radius: 20px;
+    width: 30%;
+    margin-left: 35%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.datacontainer > h1{
+    font-size: 5px;
+}
+
+/* จัดรูปภาพ Icon facebook, Line และ Call ให้อยู่กึ่งกลาง และมีขนาดข้อความ 20 px */
+.dataPic{
+    padding-top: 20px;
+}
+
+.dataPic > h1{
+    font-size: 16px;
+}
+
+.data > h2{
+    font-size: 40px;
+}

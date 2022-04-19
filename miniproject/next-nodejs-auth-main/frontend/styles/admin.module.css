@@ -1,0 +1,232 @@
+/* Style ของหน้านี้เป็นการจัดหน้า Admin ทั้งหมด */
+/* มีการใช้ทักษะการ กดปุ่ม ชี้ปุ่ม */
+/* มีการใช้ทักษะการ แบ่งตาราง เพื่อจัดหน้า */
+/* มีการใช้ทักษะการ ดึง font ภายนอกมาใช้ */
+
+/* การนำ font จากภายนอกเข้ามาใช้งาน */
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300&family=Varela+Round&display=swap');
+
+/* ปุ่ม Get ไว้แสดงข้อมูล */
+.button_get {
+  background-color: rgb(25, 104, 25);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+/* ปุ่ม Delete ไว้ลบข้อมูล */
+.button_delete {
+  background-color: rgba(206, 68, 68, 0.979);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* ปุ่ม Update ไว้อัพเดตข้อมูล */
+.button_update {
+  background-color: rgb(73, 177, 137);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* ปุ่ม Add ไว้เพิ่มข้อมูล */
+.button_add {
+  background-color: rgb(29, 119, 204);
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+/* สีเปลี่ยนเมื่อชี้ปุ่ม Add */
+.button_add:hover {
+  background-color: rgb(11, 64, 117);
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+.edit_button {
+  margin-top: 20px;
+}
+
+/* แสดงรายละเอียดจากฟังก์ชัน showCustomers */
+.list {
+  display: flex;
+  justify-content: center;
+  font-family: "Monaco",  monospace;
+  list-style: none;
+  margin: 10px;
+  padding: 1px;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+
+.list1 {
+  background-color: rgb(75, 105, 93);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 35px;
+  padding: 15px;
+  flex-wrap: wrap;
+  width: 80vw;
+} 
+
+/* style หลักของทั้งหน้า  */
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Karantina', cursive;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid rgb(151, 151, 151);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Karantina', cursive;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.listItem > div{
+  margin: 8px 8px;
+}
+
+.listItem > div > q{
+  color: rgb(5, 146, 0);
+}
+
+/* style ในส่วน form ของการ Add ข้อมูล พวก Text, font  */
+.form_add { 
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  border: 8px solid rgba(0, 0, 0, 0.205);
+  font-size: 1.4rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.form_add1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+/* style กำหนดสีข้อความ Status เพื่อให้ดูข้อมูลง่ายขึ้น ชัดขึ้น สีโดดเด่น */
+.text {
+  color: rgb(40, 185, 35);
+  size: 15px;
+}
+
+/* style กำหนดสีปุ่ม  Status */
+.statusID {
+  background-color: rgb(255, 226, 62);
+  border-radius: 10px;
+  border: none;
+  color: rgb(95, 94, 94);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.statusID:hover{
+  background-color: #c5c2b1;
+  color: #fff;
+} 
+
+.textstatusID{
+  text-align: center;
+  color: darkgoldenrod;
+}
+
+.statusFinished{
+  background-color: rgb(139, 250, 117);
+  border-radius: 10px;
+  border: none;
+  color: rgb(95, 94, 94);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.statusFinished:hover{
+  background-color: #c5c2b1;
+  color: #fff;
+} 
+
+.fontTitle{
+  font-size: 25px;
+  color: rgb(81, 110, 138);
+}
+
+/* กำหนดส่วน Add ข้อมูลให้สัดส่วนแบบ Grid */
+.adminPage{
+  display: grid;
+  grid-template-columns: 100px auto;
+  margin-bottom: 16px;
+  border-radius: 15px;
+  padding: 10px 10px 10px 10px;
+  font-family: 'Karantina', cursive;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.adminPage>div {
+  font-family: "Monaco",  monospace;
+  color: rgb(66, 66, 66);
+  text-align: left;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Karantina', cursive;
+  font-family: 'Varela Round', sans-serif;
+}

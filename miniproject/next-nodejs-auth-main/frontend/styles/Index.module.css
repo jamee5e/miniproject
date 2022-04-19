@@ -1,0 +1,92 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.house{
+    margin-top: 3%;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.message{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 15px;;
+}
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: green;
+}
+
+
+.list {
+    display: flex;
+    margin: 10px;
+}
+
+.listItem {
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:auto;
+    /* align-items: center; */
+    margin: 5px;
+    border: 5px solid black;
+    padding: 2rem;
+    border-radius: 5px;
+    
+}
+.listItem > div{
+    margin: 1px;
+}
+.btn{
+  background-color: red;
+  border-radius: 10%;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+.btn:hover{
+    background-color: red;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 10px;
+    border: 2px solid red;
+}
+
+.projectCard{
+    max-width: 500px;
+    width : 400px;
+    margin: 10px;
+}
+
+.introHeader {
+    font-size: 2rem;    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    
+}

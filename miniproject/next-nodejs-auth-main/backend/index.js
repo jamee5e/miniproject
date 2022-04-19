@@ -103,7 +103,54 @@ router.get('/alluser', (req,res) => res.json(db.users.users))
 router.get('/', (req, res, next) => {
     res.send('Respond without authentication');
 });
+router.get("/", (req, res, next) => {
+    res.send("Respond without authentication");
+  });
 
+  let laundry = {
+    list: [
+      { "id": 1, "CustomerID": "A001", "name": "Sawalee", "surname": "Khongyuen", "status": "Washing", "price": 40 },
+      { "id": 2, "CustomerID": "A002", "name": "Surawee", "surname": "Ruanjan", "status": "Spin dryer", "price": 80 }]
+  }
+  
+  router
+    .route("/laundry")
+    .get((req, res) => {
+      res.send(laundry);
+    })
+    .post((req, res) => {
+      console.log(req.body);
+      let newCustomer = {};
+      newCustomer.id = laundry.list.length ? laundry.list[laundry.list.length - 1].id + 1 : 1;
+      newCustomer.CustomerID = req.body.CustomerID;
+      newCustomer.name = req.body.name;
+      newCustomer.surname = req.body.surname;
+      newCustomer.status = req.body.status;
+      newCustomer.price = req.body.price;
+      laundry = { list: [...laundry.list, newCustomer] };
+      res.json(laundry);
+    });
+  
+  router
+    .route("/laundry/:customer_ID")
+    .get((req, res) => {
+      let id = laundry.list.findIndex((item) => +item.id == +req.params.customer_ID)
+      res.json(laundry.list[id]);
+    })
+    .put((req, res) => {
+      let id = laundry.list.findIndex((item) => item.id == +req.params.customer_ID);
+      laundry.list[id].CustomerID = req.body.CustomerID;
+      laundry.list[id].name = req.body.name;
+      laundry.list[id].surname = req.body.surname;
+      laundry.list[id].status = req.body.status;
+      laundry.list[id].price = req.body.price;
+      res.json(laundry.list);
+    })
+    .delete((req, res) => {
+      laundry.list = laundry.list.filter((item) => +item.id !== +req.params.customer_ID);
+      res.json(laundry.list);
+    });
+  
 // Error Handler
 app.use((err, req, res, next) => {
     let statusCode = err.status || 500
