@@ -109,8 +109,8 @@ router.get("/", (req, res, next) => {
 
   let laundry = {
     list: [
-      { "id": 1, "CustomerID": "A001", "name": "Sawalee", "surname": "Khongyuen", "status": "Washing", "price": 40 },
-      { "id": 2, "CustomerID": "A002", "name": "Surawee", "surname": "Ruanjan", "status": "Spin dryer", "price": 80 }]
+      { "id": 1, "CustomerID": "A001", "name": "jamee", "surname": "boy", "status": "Washing", "price": 40 },
+      { "id": 2, "CustomerID": "A002", "name": "natthawut", "surname": "sawaengjit", "status": "Spin dryer", "price": 80 }]
   }
   
   router
