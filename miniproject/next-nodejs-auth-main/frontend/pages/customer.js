@@ -8,26 +8,26 @@ import config from '../config/config'
 export default function CustomerPage({ token }) {
   const URL = `${config.URL}/laundry`;
 
-  const [user, setUser] = useState({});
-  const [customers, setCustomers] = useState({});
-  const [CustomerID, setCustomerID] = useState("");
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [status, setStatus] = useState("Waiting");
-  const [price, setPrice] = useState(0);
-  const [customer, setCustomer] = useState({});
-  const Gm1 = ["A001", "A002", "A003", "A004"]
-  const Gm1Price = 120
-  const Gm2 = ["B005", "B006", "B007", "B008"]
-  const Gm2Price = 100
-  const Gm3 = ["C009", "C010", "C011", "C012"]
-  const Gm3Price = 80
-  const Gm4 = ["D013", "D014", "D015", "D016"]
-  const Gm4Price = 60
-  const Gm5 = ["E017", "E018", "E019", "E020"]
-  const Gm5Price = 50
-  const Gm6 = ["F021", "F022", "F023", "F024"]
-  const Gm6Price = 40
+  // const [user, setUser] = useState({});
+  // const [customers, setCustomers] = useState({});
+  // const [CustomerID, setCustomerID] = useState("");
+  // const [name, setName] = useState("");
+  // const [surname, setSurname] = useState("");
+  // const [status, setStatus] = useState("Waiting");
+  // const [price, setPrice] = useState(0);
+  // const [customer, setCustomer] = useState({});
+  // const Gm1 = ["A001", "A002", "A003", "A004"]
+  // const Gm1Price = 120
+  // const Gm2 = ["B005", "B006", "B007", "B008"]
+  // const Gm2Price = 100
+  // const Gm3 = ["C009", "C010", "C011", "C012"]
+  // const Gm3Price = 80
+  // const Gm4 = ["D013", "D014", "D015", "D016"]
+  // const Gm4Price = 60
+  // const Gm5 = ["E017", "E018", "E019", "E020"]
+  // const Gm5Price = 50
+  // const Gm6 = ["F021", "F022", "F023", "F024"]
+  // const Gm6Price = 40
 
   useEffect(() => {
     (async () => {
