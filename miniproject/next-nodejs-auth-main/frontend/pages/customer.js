@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import config from '../config/config'
 export default function CustomerPage({ token }) {
-  const URL = `${config.URL}/laundry`;
+  const URL = `${config.URL}/rent`;
 
   const [user, setUser] = useState({});
   const [customers, setCustomers] = useState({});
@@ -16,17 +16,17 @@ export default function CustomerPage({ token }) {
   const [status, setStatus] = useState("Waiting");
   const [price, setPrice] = useState(0);
   const [customer, setCustomer] = useState({});
-  const Gm1 = ["Daytona USA", "Street Fighter II", "The House of the Dead", "A004"]
+  const Gm1 = ["Super Mario Party", "Just Dancec 2020", "Worms W.M.D", "Minecraft"]
   const Gm1Price = 120
-  const Gm2 = ["B005", "B006", "B007", "B008"]
+  const Gm2 = ["Just Dancec 2019", "Overcooked! 2", "Pokémon™ Legends: Arceus", "Hollow Knight"]
   const Gm2Price = 100
-  const Gm3 = ["C009", "C010", "C011", "C012"]
+  const Gm3 = ["The Legend of Zelda™", "Moving Out", "DOOM 3", "Stardew Valley"]
   const Gm3Price = 80
-  const Gm4 = ["D013", "D014", "D015", "D016"]
+  const Gm4 = ["Resident Evil 6", "Resident Evil 5", "Super Mario Odyssey™", "Mortal Kombat 11"]
   const Gm4Price = 60
-  const Gm5 = ["E017", "E018", "E019", "E020"]
+  const Gm5 = ["Assassin's Creed® III", "NBA 2K20", "Super Smash Bros", "Animal Crossing™"]
   const Gm5Price = 50
-  const Gm6 = ["F021", "F022", "F023", "F024"]
+  const Gm6 = ["MONSTER HUNTER RISE", "Pokémon™ Sword", "Fitness Boxing", "Ben 10"]
   const Gm6Price = 40
 
   useEffect(() => {
@@ -100,7 +100,7 @@ export default function CustomerPage({ token }) {
       </Head>
       <div>
         <Image
-          src="/laundry.png"
+          src="/1.jpg"
           alt="Picture"
           width={900}
           height={200}
@@ -161,22 +161,16 @@ export default function CustomerPage({ token }) {
             </th>
 
             <div className={styles.form_add1}>
-              <div className={styles.wight}><h2>Wight: 25-30 Kg Temperature : HOT Time: 30 Minute</h2></div>
               <div>{rendersome(Gm1, Gm1Price)}</div>
 
-              <div className={styles.wight}><h2>Wight: 25-30 Kg Temperature : Medium Time: 40 Minute</h2></div>
               <div>{rendersome(Gm2, Gm2Price)}</div>
 
-              <div className={styles.wight}><h2>Wight: 20-25 Kg Temperature : HOT Time: 45 Minute</h2></div>
               <div>{rendersome(Gm3, Gm3Price)}</div>
 
-              <div className={styles.wight}><h2>Wight: 20-25 Kg Temperature : Medium Time: 50 Minute</h2></div>
               <div>{rendersome(Gm4, Gm4Price)}</div>
 
-              <div className={styles.wight}><h2>Wight: 15-20 Kg Temperature : Medium Time: 55 Minute</h2></div>
               <div>{rendersome(Gm5, Gm5Price)}</div>
 
-              <div className={styles.wight}><h2>Wight: 10-15 Kg Temperature : Medium Time: 60 Minute</h2></div>
               <div>{rendersome(Gm6, Gm6Price)}</div>
             </div>
           </tr>

@@ -7,7 +7,7 @@ import Head from 'next/head'
 import Image from 'next/image' 
 import Link from 'next/link'
 
-const URL = `${config.URL}/laundry`;
+const URL = `${config.URL}/rent`;
 const suggest = () => {
   
   return (
@@ -17,7 +17,7 @@ const suggest = () => {
       </Head>
       <div>
         <Image
-          src="/laundry.png"
+          src="/1.jpg"
           alt="Picture"
           width={900}
           height={200}
@@ -32,7 +32,7 @@ const suggest = () => {
         </div>
         <div className={styles.intro}>
           <Image
-            src="/intro.png"
+            src="/2.jpg"
             alt="Picture"
             width={1200}
             height={325}

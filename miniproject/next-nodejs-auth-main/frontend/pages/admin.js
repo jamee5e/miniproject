@@ -8,7 +8,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 
 
-const URL = `${config.URL}/laundry`;
+const URL = `${config.URL}/rent`;
 
 const admin = ({ token }) => {
   const [user, setUser] = useState({});
@@ -199,20 +199,20 @@ const admin = ({ token }) => {
             <div className={styles.form_add1}>
               <div className={styles.textstatusID}><h2>STATUS</h2></div>
               <div>
-                <button className={styles.statusID} onClick={() => setStatus("Washing")}>
-                  Washing
+                <button className={styles.statusID} onClick={() => setStatus("Rent 3 day")}>
+                Rent 3 day
               </button> <br />
-                <button className={styles.statusID} onClick={() => setStatus("Rinse")}>
-                  Rinse
+                <button className={styles.statusID} onClick={() => setStatus("Rent 7 day")}>
+                Rent 7 day
               </button> <br />
-                <button className={styles.statusID} onClick={() => setStatus("Air Dry")}>
-                  Air Dry
+                <button className={styles.statusID} onClick={() => setStatus("Rent 15 day")}>
+                Rent 15 day
               </button> <br />
-                <button className={styles.statusID} onClick={() => setStatus("Spin dryer")}>
-                  Spin dryer
+                <button className={styles.statusID} onClick={() => setStatus("Rent 21 day")}>
+                Rent 21 day
               </button> <br />
-                <button className={styles.statusFinished} onClick={() => setStatus("Finished")}>
-                  Finished
+                <button className={styles.statusFinished} onClick={() => setStatus("Rent 30 day")}>
+                Rent 30 day
               </button>
               </div></div>
           </tr>

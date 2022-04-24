@@ -109,12 +109,12 @@ router.get("/", (req, res, next) => {
 
   let laundry = {
     list: [
-      { "id": 1, "CustomerID": "A001", "name": "jamee", "surname": "boy", "status": "Washing", "price": 40 },
-      { "id": 2, "CustomerID": "A002", "name": "natthawut", "surname": "sawaengjit", "status": "Spin dryer", "price": 80 }]
+      { "id": 1, "CustomerID": "Super Mario Party", "name": "jamee", "surname": "boy", "status": "Rent 3 day", "price": 100 },
+      { "id": 2, "CustomerID": "Just Dancec 2020", "name": "natthawut", "surname": "sawaengjit", "status": "Rent 7 day", "price": 200}]
   }
   
   router
-    .route("/laundry")
+    .route("/rent")
     .get((req, res) => {
       res.send(laundry);
     })
@@ -132,7 +132,7 @@ router.get("/", (req, res, next) => {
     });
   
   router
-    .route("/laundry/:customer_ID")
+    .route("/rent/:customer_ID")
     .get((req, res) => {
       let id = laundry.list.findIndex((item) => +item.id == +req.params.customer_ID)
       res.json(laundry.list[id]);
