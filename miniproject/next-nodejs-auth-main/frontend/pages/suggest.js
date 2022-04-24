@@ -38,7 +38,7 @@ const suggest = () => {
             height={325}
           />
         </div> 
-        <div className={styles.about}><button className={styles.next}><Link href="/about"><a> <span> NEXT </span> </a></Link></button></div>
+        <div className={styles.about}><button className="mr-4 p-2 bg-red-400 hover:text-indigo-500 rounded-lg drop-shadow-lg"><Link href="/about"><a> <span> NEXT </span> </a></Link></button></div>
         
       </div>
     </Layout>

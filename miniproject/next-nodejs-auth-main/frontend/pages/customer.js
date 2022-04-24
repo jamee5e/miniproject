@@ -17,17 +17,17 @@ export default function CustomerPage({ token }) {
   const [price, setPrice] = useState(0);
   const [customer, setCustomer] = useState({});
   const Gm1 = ["Super Mario Party", "Just Dancec 2020", "Worms W.M.D", "Minecraft"]
-  const Gm1Price = 120
+  const Gm1Price = 100
   const Gm2 = ["Just Dancec 2019", "Overcooked! 2", "Pokémon™ Legends: Arceus", "Hollow Knight"]
   const Gm2Price = 100
   const Gm3 = ["The Legend of Zelda™", "Moving Out", "DOOM 3", "Stardew Valley"]
-  const Gm3Price = 80
+  const Gm3Price = 100
   const Gm4 = ["Resident Evil 6", "Resident Evil 5", "Super Mario Odyssey™", "Mortal Kombat 11"]
-  const Gm4Price = 60
+  const Gm4Price = 100
   const Gm5 = ["Assassin's Creed® III", "NBA 2K20", "Super Smash Bros", "Animal Crossing™"]
-  const Gm5Price = 50
+  const Gm5Price = 100
   const Gm6 = ["MONSTER HUNTER RISE", "Pokémon™ Sword", "Fitness Boxing", "Ben 10"]
-  const Gm6Price = 40
+  const Gm6Price = 100
 
   useEffect(() => {
     (async () => {
@@ -45,13 +45,13 @@ export default function CustomerPage({ token }) {
         console.log(result)
         if (result == undefined) {
           return (
-            <button className={styles.button_ID} onClick={() => { setCustomerID(name); setPrice(Price) }}>
+            <button  className={styles.button_ID} onClick={() => { setCustomerID(name); setPrice(Price) }}>
               {name}
             </button>
           )
         } else {
           return (
-            <button className={styles.button_ID} style={{ backgroundColor: "FireBrick" }} disabled={true}>{name}</button>
+            <button  className={styles.button_ID} style={{ backgroundColor: "FireBrick" }} disabled={true}>{name}</button>
           )
         }
       }
@@ -152,7 +152,7 @@ export default function CustomerPage({ token }) {
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}>
                 </input>
-                <button className={styles.button_add}
+                <button className="mr-4 p-2 bg-red-400 hover:text-indigo-500 rounded-lg drop-shadow-lg"
                   onClick={() => addCustomer(CustomerID, name, surname, status, price)}>
                   Add
                 </button>

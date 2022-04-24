@@ -27,7 +27,7 @@ const about = () => {
                     width={50}
                     height={50}
                 />
-                <h1>Sawalee Khongyuen</h1>
+                <h1>Natthawut Sawaengjit</h1>
             </div> 
             <div className={styles.dataPic}>
                 <Image
@@ -36,7 +36,7 @@ const about = () => {
                     width={50}
                     height={50}
                 />
-                <h1>5935512054</h1>
+                <h1>5935512006</h1>
             </div> 
             <div className={styles.dataPic}>
                 <Image
@@ -45,10 +45,10 @@ const about = () => {
                     width={50}
                     height={50}
                 />
-                <h1>59-355-120-54</h1>
+                <h1>08x-xxx-xxx</h1>
             </div> 
         </div></div> 
-        <div className={styles.about}><button className={styles.previous}><Link href="/suggest"><a> <span> Previous </span> </a></Link></button></div>
+        <div className={styles.about}><button className="mr-4 p-2 bg-red-400 hover:text-indigo-500 rounded-lg drop-shadow-lg"><Link href="/suggest"><a> <span> Previous </span> </a></Link></button></div>
       </div>
     </Layout>
   );
