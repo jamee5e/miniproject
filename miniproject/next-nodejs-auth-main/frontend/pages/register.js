@@ -39,7 +39,7 @@ export default function Register({ token }) {
     }
 
     const registerForm = () => (
-        <div class="border-solid border-1 border-indigo-600 box-border h-15 w-30 p-2 border-4">
+        <div class="border-solid border-2 border-indigo-600 box-border h-15 w-30 p-2 border-4">
             <div>
                 Username:
             </div>
@@ -90,6 +90,9 @@ export default function Register({ token }) {
             <div className={styles.container}>
                 <Navbar />
                 <h1 className="mt-3 flex justify-center text-3xl font-bold underline">Register</h1>
+                <div className="mt-3 flex justify-center">
+                    Status:  {status}
+                </div>
                 <div className="mt-3 flex justify-center">
                     {registerForm()}
                 </div>

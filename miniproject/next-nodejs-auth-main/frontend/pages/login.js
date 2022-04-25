@@ -75,6 +75,9 @@ export default function Login({ token }) {
                 <Navbar />
                 <h1 className="mt-3 flex justify-center text-3xl font-bold underline">Login</h1>
                 <div className="mt-3 flex justify-center">
+                    Status:  {status}
+                </div>
+                <div className="mt-3 flex justify-center">
                   {loginForm()}  
                 </div>
                 
