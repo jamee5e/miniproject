@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import { useState } from 'react'
 import Navbar from '../components/navbar'
-import styles from '../styles/Home.module.css'
+import styles from "../styles/suggest.module.css";
+import Image from 'next/image'
 import axios from 'axios'
 import config from '../config/config'
 
@@ -29,7 +30,7 @@ export default function Login({ token }) {
     }
 
     const loginForm = () => (
-        <div className={styles.gridContainer}>
+        <div class="border-solid border-1 border-indigo-600 box-border h-15 w-30 p-2 border-4">
             <div>
                 Username:
             </div>
@@ -40,7 +41,7 @@ export default function Login({ token }) {
                     onChange={(e) => setUsername(e.target.value)}
                 />
             </div>
-            <div>
+            <div >
                 Password:
             </div>
             <div>
@@ -61,20 +62,24 @@ export default function Login({ token }) {
             <Head>
                 <title>Login</title>
             </Head>
+            <div>
+        <Image
+          src="/1.jpg"
+          alt="Picture"
+          width={900}
+          height={200}
+          sizes="(max-width: 500px) 100px"
+        />
+      </div>
             <div className={styles.container}>
                 <Navbar />
-                <h1>Login</h1>
-                <div><b>Token:</b> {token.substring(0, 15)}...
-                <button onClick={copyText}> Copy token </button>
+                <h1 className="mt-3 flex justify-center text-3xl font-bold underline">Login</h1>
+                <div className="mt-3 flex justify-center">
+                  {loginForm()}  
                 </div>
-                <br/>
-                <div>
-                    Status:  {status}
-                </div>
-                <br />
-                {loginForm()}
-                <div>
-                    <button className="mr-4 p-2 bg-red-400 hover:text-indigo-500 rounded-lg drop-shadow-lg" onClick={login}>Login</button>
+                
+                <div className="mt-3 flex justify-center">
+                    <button className=" mr-4 p-2 bg-red-400 hover:text-indigo-500 rounded-lg drop-shadow-lg " onClick={login}>Login</button>
                 </div>
             </div>
         </Layout>

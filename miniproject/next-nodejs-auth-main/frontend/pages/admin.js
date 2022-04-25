@@ -94,17 +94,18 @@ const admin = ({ token }) => {
             <div><b>Status:</b> <q>{item.status}</q></div>
             <div><b>Price:</b> {item.price}</div>
             <div className={styles.edit_button}>
-              <button className={styles.button_get}
+
+              <button className="mr-4 p-2 bg-teal-500 hover:text-indigo-500 rounded-lg drop-shadow-lg" 
                 onClick={() => getCustomer(item.id)}
               >
                 Get
               </button>
-              <button className={styles.button_update}
+              <button className="mr-4 p-2 bg-fuchsia-500 hover:text-indigo-500 rounded-lg drop-shadow-lg" 
                 onClick={() => updateCustomer(item.id)}
               >
                 Update
               </button>
-              <button className={styles.button_delete}
+              <button className="mr-4 p-2 bg-red-600 hover:text-indigo-500 rounded-lg drop-shadow-lg" 
                 onClick={() => deleteCustomer(item.id)}
               >
                 Delete
@@ -124,7 +125,7 @@ const admin = ({ token }) => {
       </Head>
       <div>
         <Image
-          src="/laundry.png"
+          src="/1.jpg"
           alt="Picture"
           width={900}
           height={200}
@@ -191,7 +192,7 @@ const admin = ({ token }) => {
                   </div>
                 </div>
 
-                <button className={styles.button_add} onClick={() => addCustomer(CustomerID, name, surname, status, price)}>
+                <button  className="mb-2 mr-4 p-2 bg-red-500 hover:text-indigo-500 rounded-lg drop-shadow-lg" onClick={() => addCustomer(CustomerID, name, surname, status, price)}>
                   Add
                 </button>
               </div>
@@ -199,19 +200,19 @@ const admin = ({ token }) => {
             <div className={styles.form_add1}>
               <div className={styles.textstatusID}><h2>STATUS</h2></div>
               <div>
-                <button className={styles.statusID} onClick={() => setStatus("Rent 3 day")}>
+                <button  className="mb-2 mr-4 p-2 bg-teal-500 hover:text-indigo-500 rounded-lg drop-shadow-lg" onClick={() => setStatus("Rent 3 day")}>
                 Rent 3 day
               </button> <br />
-                <button className={styles.statusID} onClick={() => setStatus("Rent 7 day")}>
+                <button className="mb-2 mr-4 p-2 bg-teal-500 hover:text-indigo-500 rounded-lg drop-shadow-lg" onClick={() => setStatus("Rent 7 day")}>
                 Rent 7 day
               </button> <br />
-                <button className={styles.statusID} onClick={() => setStatus("Rent 15 day")}>
+                <button className="mb-2 mr-4 p-2 bg-teal-500 hover:text-indigo-500 rounded-lg drop-shadow-lg" onClick={() => setStatus("Rent 15 day")}>
                 Rent 15 day
               </button> <br />
-                <button className={styles.statusID} onClick={() => setStatus("Rent 21 day")}>
+                <button className="mb-2  mr-4 p-2 bg-teal-500 hover:text-indigo-500 rounded-lg drop-shadow-lg" onClick={() => setStatus("Rent 21 day")}>
                 Rent 21 day
               </button> <br />
-                <button className={styles.statusFinished} onClick={() => setStatus("Rent 30 day")}>
+                <button className="mb-2  mr-4 p-2 bg-teal-500 hover:text-indigo-500 rounded-lg drop-shadow-lg" onClick={() => setStatus("Rent 30 day")}>
                 Rent 30 day
               </button>
               </div></div>

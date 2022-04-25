@@ -28,11 +28,11 @@ const suggest = () => {
         <Navbar />
         <div className={styles.container1}>
           <div className={styles.title}>
-          <marquee bgcolor="White" direction="lefe" scrollamount="8" width="100%">Introduce How to Use Basic</marquee></div>
+          <marquee bgcolor="White" direction="lefe" scrollamount="8" width="100%">Nintendo switch game </marquee></div>
         </div>
         <div className={styles.intro}>
           <Image
-            src="/2.jpg"
+            src="/4.jpg"
             alt="Picture"
             width={1200}
             height={325}

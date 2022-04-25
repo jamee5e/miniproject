@@ -21,8 +21,15 @@ export default function Home({ token }) {
       </div>
     <div className={styles.container}>
         <Navbar className = {styles.Container}/>
-        <h1 className="text-3xl font-bold underline" >Home page</h1>
-        No login required!
+        <div>
+        <Image
+          src="/5.jpg"
+          alt="Picture"
+          width={900}
+          height={900}
+          sizes="(max-width: 1000px) 1000px"
+        />
+      </div>
     </div>
 </Layout>
   )

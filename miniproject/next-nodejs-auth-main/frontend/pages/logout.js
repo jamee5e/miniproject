@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import { useEffect, useState } from 'react'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/suggest.module.css'
+import Image from 'next/image'
 import axios from 'axios'
 import config from '../config/config'
 
@@ -25,12 +26,27 @@ export default function Logout({ token }) {
             <Head>
                 <title>User profile</title>
             </Head>
+            <div>
+        <Image
+          src="/1.jpg"
+          alt="Picture"
+          width={900}
+          height={200}
+          sizes="(max-width: 500px) 100px"
+        />
+      </div>
             <div className={styles.container}>
                 <Navbar />
-                <h1>Logout</h1>
+                <h1 className="mt-3 flex justify-center text-3xl font-bold underline">Logout</h1>
                 <div>
-                    <h2> {status}  </h2>
-                </div>
+        <Image
+          src="/6.png"
+          alt="Picture"
+          width={900}
+          height={200}
+          sizes="(max-width: 500px) 100px"
+        />
+      </div>
             </div>
         </Layout>
     )
